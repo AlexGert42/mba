@@ -13,6 +13,7 @@
     margin: 1px;
     background-color: $BaseLighColor;
     color: $BaseDarkColor;
+
     &:last-child {
       transform: rotate(180deg);
     }

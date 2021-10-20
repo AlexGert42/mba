@@ -65,6 +65,10 @@ export const getItemsCourses = () => async (dispatch: Dispatch) => {
 }
 
 
+
+
+
+//reducer
 export type ItemType = {
     _id: string
     title: string
@@ -72,8 +76,6 @@ export type ItemType = {
     module_2: string[]
 }
 
-
-//reducer
 type CoursesStateType = {
     items: ItemType[]
     countItems: number
