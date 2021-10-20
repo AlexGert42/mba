@@ -1,0 +1,40 @@
+@import "defStyles";
+
+//vars
+$BaseDarkColor: #2D2C2A;
+$BaseLighColor: #F7F7F7;
+$RedColor: #FF3535;
+
+
+//classes
+.container {
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  @media (max-width: 768px) {
+    padding: 0 15px;
+  }
+}
+
+
+//keyframes
+@keyframes blure {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes ShowPupap {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

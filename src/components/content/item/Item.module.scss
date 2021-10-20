@@ -1,0 +1,119 @@
+@import "../../../styles/index";
+
+.item {
+  width: 100%;
+  margin: 35px 0;
+
+  .item__title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  .item__content {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 1280px) {
+      flex-direction: column;
+    }
+
+    .item__module {
+      display: flex;
+      margin: 30px 0;
+
+      p {
+        white-space: nowrap;
+        font-size: 32px;
+        padding: 30px 0;
+        margin-right: 80px;
+        border-top: 1px solid $RedColor;
+      }
+
+      ul {
+        margin-top: 35px;
+        max-width: 325px;
+        @media (max-width: 1280px) {
+          max-width: 100%;
+          margin-top: 0;
+        }
+
+        li {
+          display: block;
+          position: relative;
+          padding: 0 0 10px 25px;
+          font-size: 16px;
+          line-height: 19px;
+
+          &::before, &::after {
+            content: '';
+            left: 0;
+            top: 5px;
+            display: block;
+            position: absolute;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $RedColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+  .item {
+
+    .item__title {
+      font-size: 22px;
+    }
+
+    .item__content {
+
+      .item__module {
+        margin: 5px 0;
+
+        &.item__module_active {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            color: #fff;
+            background-color: $RedColor;
+            margin-bottom: 15px;
+            background-image: url("../../../assets/minus.svg");
+          }
+
+          ul {
+            animation: ShowPupap .5s ease-in-out;
+            display: block;
+          }
+
+        }
+
+        p {
+          cursor: pointer;
+          border: none;
+          margin: 0;
+          width: 100%;
+          padding: 20px 20px 20px 70px;
+          color: #262626;
+          font-size: 18px;
+          background-color: $BaseLighColor;
+          background-image: url("../../../assets/cross.svg");
+          background-repeat: no-repeat;
+          background-position: 25px 50%;
+        }
+
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

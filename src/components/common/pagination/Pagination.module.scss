@@ -1,0 +1,38 @@
+@import "../../../styles/index";
+
+.pagination {
+  margin: 20px 0 0 0;
+  display: flex;
+
+  .pagination__item {
+    position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+    width: 40px;
+    height: 40px;
+    margin: 1px;
+    background-color: $BaseLighColor;
+    color: $BaseDarkColor;
+    &:last-child {
+      transform: rotate(180deg);
+    }
+
+    &:disabled {
+      user-select: none;
+      opacity: .3;
+      cursor: auto;
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.pagination__item_active {
+      background-color: $RedColor;
+      color: #ffffff;
+    }
+  }
+}
